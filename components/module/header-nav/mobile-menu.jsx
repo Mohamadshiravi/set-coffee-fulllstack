@@ -85,6 +85,7 @@ export default function MobileMenu({
               <ul className="hidden peer-checked:flex flex-col bg-zinc-800 p-2 rounded-b-lg gap-3 moraba-bold text-sm font-bold items-center">
                 {theUser.role === "ADMIN" && (
                   <Link
+                    onClick={CloseMenu}
                     href={"/p-admin"}
                     className="flex bg-stone-100 hover:bg-stone-200 transition-all cursor-pointer items-center justify-start w-full gap-4 text-zinc-700 p-2 rounded-lg"
                   >
@@ -95,6 +96,7 @@ export default function MobileMenu({
                   </Link>
                 )}
                 <Link
+                  onClick={CloseMenu}
                   href={"/p-user"}
                   className="flex bg-zinc-700 hover:bg-zinc-900 transition-all cursor-pointer items-center justify-start w-full gap-4 text-white p-2 rounded-lg"
                 >
@@ -104,6 +106,7 @@ export default function MobileMenu({
                   <h3>پنل کاربری</h3>
                 </Link>
                 <Link
+                  onClick={CloseMenu}
                   href={"/p-user/tikets"}
                   className="flex bg-zinc-700 hover:bg-zinc-900 transition-all cursor-pointer items-center justify-start w-full gap-4 text-white p-2 rounded-lg"
                 >
@@ -112,13 +115,18 @@ export default function MobileMenu({
                   </span>
                   <h3>تیکت های پشتیبانی</h3>
                 </Link>
-                <li className="flex bg-zinc-700 hover:bg-zinc-900 transition-all cursor-pointer items-center justify-start w-full gap-4 text-white p-2 rounded-lg">
+                <Link
+                  onClick={CloseMenu}
+                  href={"/p-user/orders"}
+                  className="flex bg-zinc-700 hover:bg-zinc-900 transition-all cursor-pointer items-center justify-start w-full gap-4 text-white p-2 rounded-lg"
+                >
                   <span className="block bg-backicon p-2 rounded-lg">
-                    <HiOutlineDocumentText className="text-xl text-icon" />
+                    <TbLayoutDashboard className="text-xl text-icon" />
                   </span>
                   <h3>سفارش ها</h3>
-                </li>
+                </Link>
                 <Link
+                  onClick={CloseMenu}
                   href={"/p-user/comments"}
                   className="flex bg-zinc-700 hover:bg-zinc-900 transition-all cursor-pointer items-center justify-start w-full gap-4 text-white p-2 rounded-lg"
                 >
@@ -128,6 +136,7 @@ export default function MobileMenu({
                   <h3>کامنت ها</h3>
                 </Link>
                 <Link
+                  onClick={CloseMenu}
                   href={"/p-user/account-details"}
                   className="flex bg-zinc-700 hover:bg-zinc-900 transition-all cursor-pointer items-center justify-start w-full gap-4 text-white p-2 rounded-lg"
                 >
@@ -149,6 +158,7 @@ export default function MobileMenu({
         )}
         <div className="flex flex-col gap-4 p-2 moraba-bold font-bold text-lg text-zinc-700">
           <Link
+            onClick={CloseMenu}
             href={"/"}
             className={`cursor-pointer py-2 px-3 hover:bg-mybrown2 hover:text-white transition rounded-lg ${
               pathName === "/"
@@ -159,6 +169,7 @@ export default function MobileMenu({
             صفحه اصلی
           </Link>
           <Link
+            onClick={CloseMenu}
             href={"/products"}
             className={`cursor-pointer py-2 px-3 hover:bg-mybrown2 hover:text-white transition rounded-lg ${
               pathName === "/products"
@@ -169,6 +180,7 @@ export default function MobileMenu({
             فروشگاه
           </Link>
           <Link
+            onClick={CloseMenu}
             href={"/blog"}
             className={`cursor-pointer py-2 px-3 hover:bg-mybrown2 hover:text-white transition rounded-lg ${
               pathName === "/blog"
@@ -179,6 +191,7 @@ export default function MobileMenu({
             وبلاگ
           </Link>
           <Link
+            onClick={CloseMenu}
             href={"/contact-us"}
             className={`cursor-pointer py-2 px-3 hover:bg-mybrown2 hover:text-white transition rounded-lg ${
               pathName === "/contact-us"
@@ -189,6 +202,7 @@ export default function MobileMenu({
             تماس با ما
           </Link>
           <Link
+            onClick={CloseMenu}
             href={"/about-us"}
             className={`cursor-pointer py-2 px-3 hover:bg-mybrown2 hover:text-white transition rounded-lg ${
               pathName === "/about-us"
@@ -199,6 +213,7 @@ export default function MobileMenu({
             درباره ما
           </Link>
           <Link
+            onClick={CloseMenu}
             href={"about-site"}
             className={`cursor-pointer py-2 px-3 hover:bg-mybrown2 hover:text-white transition rounded-lg ${
               pathName === "/about-site"
