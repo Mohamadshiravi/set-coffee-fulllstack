@@ -1,5 +1,4 @@
 import Footer from "@/components/module/footer";
-import Header from "@/components/module/header-nav/header";
 import StarredProduct from "@/components/template/starred-product";
 import AdSectionOne from "@/components/template/ad";
 import ArticlesSection from "@/components/template/articles";
