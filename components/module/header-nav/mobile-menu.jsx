@@ -35,6 +35,7 @@ export default function MobileMenu({
         {!theUser ? (
           <div className="p-2 mt-2">
             <Link
+              onClick={CloseMenu}
               href={"/auth/login"}
               className="bg-zinc-800 shadow-lg shadow-zinc-500 text-white text-xl moraba-bold rounded-lg p-4 w-full flex items-center justify-center gap-4 hover:bg-zinc-900 transition"
             >
